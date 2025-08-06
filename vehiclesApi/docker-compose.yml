@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    container_name: postgres_bitnami
+    environment:
+      - POSTGRESQL_USERNAME=ville
+      - POSTGRESQL_PASSWORD=senha_segura
+      - POSTGRESQL_DATABASE=meubanco
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
